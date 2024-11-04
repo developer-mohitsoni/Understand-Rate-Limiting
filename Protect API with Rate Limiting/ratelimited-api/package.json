@@ -4,8 +4,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node dist/server.js",
-    "dev": "tsc-watch --onSuccess \"npm start\""
+    "dev": "wrangler dev src/index.ts"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +12,8 @@
   "description": "",
   "dependencies": {
     "hono": "^4.6.9"
+  },
+  "devDependencies": {
+    "wrangler": "^3.84.1"
   }
 }

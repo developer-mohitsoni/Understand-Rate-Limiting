@@ -2,9 +2,10 @@
   "name": "ratelimited-api",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "dotenv -e .env wrangler dev src/index.ts"
+    "dev": "node load-env.js"
   },
   "keywords": [],
   "author": "",

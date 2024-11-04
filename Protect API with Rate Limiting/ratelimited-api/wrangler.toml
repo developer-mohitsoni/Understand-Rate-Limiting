@@ -1,0 +1,6 @@
+compatability_date = "2024-04-11"
+name = "placeholder-api"
+
+[vars]
+REDIS_REST_URL = "${UPSTASH_REDIS_REST_URL}"
+REDIS_REST_TOKEN = "${UPSTASH_REDIS_REST_TOKEN}"

@@ -1,6 +1,6 @@
 import { Hono } from "hono";
 
-import { todos } from "./utils/data.json";
+import todos from "./utils/data.json" assert { type: "json" };
 
 const app = new Hono();
 
@@ -9,7 +9,7 @@ app.get("/todos/:id", (c) => {
 
   const todoIndex = Number(todoId);
 
-  const todo = todos[todoIndex] ?? {};
+  const todo = todos.todos[todoIndex] ?? {};
 
   return c.json(todo);
 });

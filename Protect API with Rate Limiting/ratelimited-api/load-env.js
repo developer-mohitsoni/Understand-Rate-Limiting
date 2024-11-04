@@ -1,6 +1,6 @@
 import "dotenv/config";
 
-import { exec } from "child_process";
+import { exec } from "node:child_process";
 
 // Run Wrangler Dev command after loading .env variables
 exec("wrangler dev src/index.ts", (error, stdout, stderr) => {

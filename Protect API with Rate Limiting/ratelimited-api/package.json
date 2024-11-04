@@ -12,6 +12,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@upstash/ratelimit": "^2.0.4",
     "hono": "^4.6.9"
   },
   "devDependencies": {

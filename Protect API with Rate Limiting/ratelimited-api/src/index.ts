@@ -1,9 +1,17 @@
 import { Hono } from "hono";
 
+import { todos } from "./utils/data.json";
+
 const app = new Hono();
 
-app.get("/todos", (c) => {
-  return c.json({ todos: ["Buy milk", "Walk the dog", "Do laundry"] });
+app.get("/todos/:id", (c) => {
+  const todoId = c.req.param("id");
+
+  const todoIndex = Number(todoId);
+
+  const todo = todos[todoIndex] ?? {};
+
+  return c.json(todo);
 });
 
 export default app;

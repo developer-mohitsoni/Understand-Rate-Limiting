@@ -12,3 +12,9 @@ export const middleware = async (request: NextRequest) => {
 
   return NextResponse.next();
 };
+
+// If you want to work this rate limiting for the particular route you can use s:-
+
+// export const config = {
+//     matcher: "/api/:path*" // This will work for all the routes under /api mainly which starts from /api
+// }
